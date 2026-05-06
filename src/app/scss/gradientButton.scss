@@ -1,0 +1,42 @@
+.gradient_btn {
+    position: relative;
+  
+    //color: #fff;
+    background: linear-gradient(
+      270deg,
+      #307fff,
+      #5cf1d3,
+      #65d7ff,
+      #6d64ff
+    );
+  
+    background-size: 400% 400%;
+    animation: gradientMove 4s ease infinite;
+  
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+   // z-index: 1000;
+  }
+  
+  /* hover effect */
+  .gradient_btn:hover {
+    box-shadow: 0 0 6px #65d7ff, 0 0 50px #6d64ff; 
+   // z-index: 1000;
+  }
+  
+  /* click effect */
+  .gradient_btn:active {
+    transform: translateY(0);
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

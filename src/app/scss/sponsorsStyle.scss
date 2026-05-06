@@ -1,0 +1,108 @@
+
+.sponsors_container {
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    --fade-size: 60px;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black var(--fade-size),
+        black calc(100% - var(--fade-size)),
+        transparent
+      );
+      -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 60px,
+    black calc(100% - 60px),
+    transparent
+  );
+}
+
+.sponsors_container::before,
+.sponsors_container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.sponsors_container::before {
+  left: 0;
+  /*
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+  */
+ //background: linear-gradient(
+ //   to right,
+  //  rgba(255, 255, 255, 1),
+   // rgba(255, 255, 255, 0)
+  //);
+}
+
+.sponsors_container::after {
+  right: 0;
+ // background: linear-gradient(
+  //  to left,
+   // rgba(255, 255, 255, 1),
+   // rgba(255, 255, 255, 0)
+  //);
+}
+
+.sponsors_track {
+    display: inline-flex;
+    gap: 10px;
+    width: max-content; /* width depends on items */
+    animation: sponsors_animation 80s linear infinite; // 40
+}
+
+.sponsors_track.sponsors_track-left {
+    animation: sponsors_right_animation 80s linear infinite; // 40
+}
+
+.sponsors_item {
+    flex: 0 0 auto; /* prevent shrinking */
+     width: 300px;
+  //  width: 600px;
+    height: 140px;
+
+    @media(max-width: 600px) {
+        width: 250px;
+    }
+}
+
+
+@keyframes sponsors_animation {
+    from {
+        transform: translateX(0)
+       }
+       to {
+        transform: translateX(-50%)
+       }
+}
+
+  @keyframes sponsors_right_animation {
+   from {
+    transform: translateX(-50%)
+   }
+   to {
+    transform: translateX(0)
+   }
+  }
+
+  .sponsors_container:hover .sponsors_track{
+    animation-play-state: paused;
+  }
+
+    .sponsors_container:hover .sponsors_track.sponsors_track-left{
+        animation-play-state: paused;
+      }
+        

@@ -1,0 +1,49 @@
+
+.carousel_speakers {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .carousel_speakers_track {
+    display: flex;
+    width: max-content; /* width depends on items */
+    animation: scroll 10s linear infinite; // 10s
+  }
+  
+  .carousel_speakers_item {
+    flex: 0 0 auto; /* prevent shrinking */
+    width: 450px;
+    height: 50vh;
+    margin-left: 3rem;
+
+    img {
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    @media(max-width: 600px) {
+        margin-left: 1.6rem;
+        width: 300px;
+        height: 300px;
+
+      img {
+        height: 300px;
+      }
+    }
+  }
+  
+  /* Keyframes for infinite scroll */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+     transform: translateX(-50%);
+    }
+  }
+  
+  /* Optional: pause on hover */
+  .carousel_speakers:hover .carousel_speakers_track {
+    animation-play-state: paused;
+  }

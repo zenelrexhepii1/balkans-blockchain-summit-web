@@ -1,0 +1,435 @@
+@import "tailwindcss";
+
+
+@font-face {
+  src: url("../app/fonts/ClashDisplay-Regular.otf");
+  font-family: "clashDisplay-regular";
+  font-weight: 400;
+}
+
+@font-face {
+  src: url("../app/fonts/ClashDisplay-Semibold.otf");
+  font-family: "clashDisplay-bold";
+  font-weight: 600;
+}
+
+@font-face {
+  src: url("../app/fonts/BoldPixels.otf");
+  font-family: "boldPixels";
+} 
+
+@font-face {
+  src: url("../app/fonts/Venimg-Regular.ttf");
+  font-family: "venimg-regular"
+}
+
+.font-regular-custom {
+  font-family: "clashDisplay-regular";
+}
+
+.font-bold-custom {
+  font-family: "clashDisplay-bold";
+}
+
+.font-boldpixels-custom {
+  font-family: "boldPixels";
+}
+
+.font-venimg {
+    font-family: "venimg-regular"
+}
+
+.link_custom {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.link_custom:hover {
+  color: #6d64ff;
+  transition: all 0.2s ease-in;
+}
+
+.link_custom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #6d64ff;
+  background-size: 200% auto;
+  transition: all .5s;
+  transform: translateX(-100%);
+}
+
+.link_custom:hover::after {
+  transform: translateX(0%);
+  animation: linkCustom 3s linear infinite;
+}
+
+@keyframes linkCustom {
+  0% { background-position: 100% 0%; }
+  50% { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
+}
+
+
+/* Hide scrollbar but keep scrolling */
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
+.navbar_active {
+  transform: translateX(0);
+  transition: 0.4s ease-in-out;
+}
+
+.navbar_close {
+ transform: translateX(100%);
+  transition: 0.4s ease-in-out;
+}
+
+.speaker_content-hidden {
+  transform: translateY(100%);
+}
+
+.speaker_content-show {
+  transform: translateY(0);
+  transition: 0.4s ease-in-out;
+}
+
+.loader {
+  width: 400px;
+  height: 5px;
+  display: inline-block;
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  width: 0;
+  height: 4.8px;
+  background: #FFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: animFw 2s linear infinite;
+}
+
+@keyframes animFw {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media(max-width: 600px) {
+  .loader {
+    width: 100%;
+  }
+}
+
+
+.loader_agenda {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #6d64ff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation_loader_agenda 2s linear infinite;
+  }
+
+  @keyframes rotation_loader_agenda {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
+
+
+  .home_loading {
+    width: 40px;
+    height: 60px;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    position: relative;
+    border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;
+  }
+  
+  .home_loading::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50% , 50%);
+    width: 10px;
+    height: 10px;
+    background: #FFF;
+    border-radius: 50%;
+    animation: fadeDown_home 2s ease-out infinite;
+  }
+  
+  @keyframes fadeDown_home {
+    0% {
+      top: 0%;
+      opacity: 1;
+    }
+    100% {
+      top: 60%;
+      opacity: 0;
+    }
+  }
+  
+
+  .loader_register {
+    width: 25px;
+    height: 25px;
+    border: 5px solid #ddd;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+  .slide_home::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.80),
+      rgba(0, 0, 0, 0.60)
+    );
+    z-index: 1;
+  }
+  
+  /*
+  @layer base {
+    body {
+      @apply cursor-none;
+    }
+  
+    @media (max-width: 768px) {
+      body {
+        @apply cursor-auto;
+      }
+    }
+  }
+    */
+
+
+  
+  /* */
+  .loader_skeleton {
+    width: 48px;
+    height: 48px;
+    border: 5px dotted #FFF;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
+
+  .agenda-page [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero_background {
+   /* height: 685px; */
+   background: url("/images/new_banner.png") no-repeat center center / cover;
+  }
+
+  .hero_background.left {
+    background: url("/images/homepage-banner-left.png") no-repeat left;
+  }
+
+  .hero_background.right {
+    background: url("/images/home-banner-right.png") no-repeat right;
+    position: absolute;
+    bottom: 0;
+  }
+
+
+  @media (max-width: 968px) {
+    .hero_background {
+      background: url("/images/mobile-bg.png") no-repeat center center /cover;
+      background-color: black;
+      background-size: 100%;
+    }
+  }
+  
+  .custom_form_loading {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+
+@media(max-width: 968px) {
+  .hero_mobile-feedback {
+    background: url("../../public/images/new-bg-pr.png") no-repeat center right /cover;
+    background-size: 100%;
+    background-position: top;
+  }
+}
+
+.meetspeakers_background {
+   background: url("../../public/images/meet-speakers-background.png") no-repeat center center /cover;
+}
+
+.footer_background {
+  background: url("../../public/images/footer-new-bg.png") no-repeat center / cover;
+  height: 90vh;
+}
+
+.glow-bg-speaker {
+  position: absolute;
+  right: 0;
+  bottom: -200px;
+  background: linear-gradient(
+    270deg,
+    #2579FF,
+    #7057FF
+  );
+  -webkit-filter: blur(100px);
+  filter: blur(100px);
+  width: 100%;
+  height: 250px;
+  border-radius: 100%; /* makes it circular instead of square */
+  overflow: hidden;   /* ensures blur doesn’t leak square edges */
+}
+
+
+.glow-bg-speaker::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(48, 127, 255, 0.5),
+    #5cf1d3,
+    #65d7ff,
+    #6d64ff
+  );
+  -webkit-filter: blur(120px);
+  filter: blur(120px);
+  opacity: 0.8;
+}
+
+
+.sponsors_background {
+  background: url("../../public/images/Vector.png") no-repeat center
+}
+
+.icon_sponsors-mobile svg {
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .icon_sponsors-mobile svg {
+    width: 90px;
+    height: 30px;
+  }
+  .slick-slide > div {
+    margin: 0 10px;
+    margin-top: 6px;
+    height: 461px;
+  }
+
+}
+/*
+.slick-arrow {
+  position: absolute !important;
+  bottom: 0px; /* adjust distance below slider
+  top: auto !important;
+
+  width: 68px;
+  height: 68px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid #A9A9A9;
+  border-radius: 12px;
+
+  z-index: 20;
+  cursor: pointer;
+}
+
+.slick-arrow {
+  transition: all 0.3s ease;
+}
+
+.slick-arrow:hover {
+  background: #000;
+  transform: scale(1.05);
+}
+  */
+  /* 1. Target the slider track only when autoplay is disabled */
+/* React-slick adds 'slick-initialized' and you can toggle a custom class 
+   on your container or target the specific state of the track */
+
+   .manual-mode .slick-track {
+    transition-duration: 500ms !important;
+    transition-timing-function: ease-out !important;
+  }
+
+  .ticker-mode .slick-track {
+    transition-timing-function: linear !important;
+  }
+
+

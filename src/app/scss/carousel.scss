@@ -1,0 +1,28 @@
+.carosuel_track {
+    display: flex;
+    flex-direction: column;
+    animation: moveUp 16s infinite ease;
+}
+
+.slide {
+    height: 800px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+   // background: rgba(0,0,0.6);
+    flex-shrink: 0;
+    clip-path: polygon(
+        0 0,            /* top-left */
+        100% 0,         /* top-right */
+        100% 95%,       /* bottom-right start curve */
+        50% 100%,       /* bottom middle point */
+        0 95%           /* bottom-left start curve */
+    )
+}
+
+  @keyframes moveUp {
+    0%, 24%   { transform: translateY(0); }
+    25%, 49%  { transform: translateY(-800px); }
+    50%, 74%  { transform: translateY(-1600px); }
+    75%, 100% { transform: translateY(-2400px); }
+  }

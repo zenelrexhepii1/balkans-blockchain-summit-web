@@ -1,0 +1,29 @@
+.gradient-text-hero {
+  
+    background: linear-gradient(
+      90deg,
+      #2579FF,
+      #4BF3D3,
+      #7057FF,
+      #2579FF
+    );
+  
+    background-size: 300% 300%;
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: gradientMove 6s ease infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
