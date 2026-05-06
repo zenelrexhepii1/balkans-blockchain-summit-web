@@ -134,7 +134,7 @@ export const speakersMock = [
 
     {
         speaker_id: 9,
-        speaker_image: "/speakers/uranik.png",
+        speaker_image: "/speakers/ubegu.png",
         speaker_name: "Uranik Begu",
         speaker_description: "Uranik Begu is Director at Plug and Play Tech Center, where he connects startups, corporations, and investors to drive innovation in the region. With 20+ years of experience, he previously led Innovation Centre Kosovo (ICK) for over a decade and now serves as a board member. He is also an advisor to startups like Dua and Zvilo, and a mentor at EBRD’s Star Venture Programme, supporting early-stage companies with strategy and growth.",
         speaker_position: "Director at Plug and Play Tech Center",
@@ -367,6 +367,131 @@ export const speakersMock = [
             {
                 id: 2,
                 linkUrl: "https://www.linkedin.com/in/selim-maloku/",
+                icon: <LinkedinIcon/>,
+            }
+        ],
+    },
+    {
+        speaker_id: 23,
+        speaker_image:"/speakers/Hekuran.png",
+        speaker_name: "Hekuran Doli",
+        speaker_description: "Hekuran Doli is Co-Founder of Cybee.ai, a cybersecurity company focused on endpoint, cloud, and compliance security for growing businesses. With 20+ years of experience, his work spans offensive security, secure software development, AI-driven threat detection, and cloud security, with early research recognized internationally. At Cybee.ai, he focuses on making advanced cybersecurity simple and accessible, with a strong interest in AI, blockchain, and digital trust.",
+        speaker_position: "Co-Founder of Cybee.ai",
+        speaker_socials: [
+            {
+                id: 1,
+                linkUrl: "https://www.linkedin.com/in/hekurandoli",
+                icon: <LinkedinIcon/>,
+            }
+        ],
+    },
+    {
+        speaker_id: 24,
+        speaker_image:"/speakers/labiaziri.png",
+        speaker_name: "Labinot Aziri",
+        speaker_description: "Labinot Aziri is a crypto researcher and market strategist with a background in Computer Science and Engineering, currently working at Cryptolbanians. He focuses on on-chain data, market behavior, and macro trends to identify high-conviction opportunities in the crypto market. Beyond research, he is also an instructor at BCA Blockchain & Crypto Academy, teaching blockchain fundamentals, on-chain analysis, and trading..",
+        speaker_position: "Market Strategist at Cryptolbanian",
+        speaker_socials: [
+            {
+                id: 1,
+                linkUrl: "https://www.facebook.com/7abinot/",
+                icon: <FacebookIcon/>,
+            },
+            {
+                id: 2,
+                linkUrl: "https://mk.linkedin.com/in/1abinot",
+                icon: <LinkedinIcon/>,
+            }
+        ],
+    },
+    {
+        speaker_id: 25,
+        speaker_image:"/speakers/robert.png",
+        speaker_name: "Robert Shala ",
+        speaker_description: "Robert Shala is a cybersecurity leader and RIT Kosovo alumnus with an M.A. in Security Studies from Georgetown University, earned on a merit-based scholarship. He has advised on Kosovo’s National Cybersecurity Strategy and related legislation, helped develop the Kosovo Security Force’s Cyber Defense Curriculum, and supported critical infrastructure security assessments in Eastern Europe. He is also a co-founder of Sentry, where he leads offensive security and AI-focused security work, and he served as a member of OpenAI's External AI Red Team.",
+        speaker_position: "Co-Founder at Sentry",
+        speaker_socials: [
+            {
+                id: 1,
+                linkUrl: "https://x.com/RobertShala_XK",
+                icon: <XIcon/>,
+            },
+            {
+                id: 2,
+                linkUrl: "https://www.linkedin.com/in/robert-shala",
+                icon: <LinkedinIcon/>,
+            }
+        ],
+    },
+    {
+        speaker_id: 26,
+        speaker_image:"/speakers/sedat.png",
+        speaker_name: "Sedat Citaku",
+        speaker_description: "Sedat Citaku is a crypto and macro analyst, researcher, and ecosystem builder from Kosovo. With more than 15 years of experience in telecom infrastructure and technology, he transitioned full-time into crypto in 2021 and now serves as Head of Research at Cryptolbanian.  He's also the cofounder at 313 Labs and is one of the key organizers behind the Balkans Blockchain Summit, where he works to bridge the Balkans with the global Web3 industry through research, education, and ecosystem development.",
+        speaker_position: "Macro Research Analyst at Cryptolbanians",
+        speaker_socials: [
+            {
+                id: 1,
+                linkUrl: "https://x.com/CitakuSedat",
+                icon: <XIcon/>,
+            },
+            {
+                id: 2,
+                linkUrl: "https://www.facebook.com/dattc/",
+                icon: <FacebookIcon/>,
+            },
+            {
+                id: 3,
+                linkUrl: "https://www.linkedin.com/in/sedat-citaku-85b772a7",
+                icon: <LinkedinIcon/>,
+            }
+        ],
+    },
+    {
+        speaker_id: 27,
+        speaker_image:"/speakers/lbnt.png",
+        speaker_name: "Labinot Bajrami",
+        speaker_description: "Labinot Bajrami is a crypto entrepreneur, trader, and educator with nearly a decade of experience in the blockchain space. He serves as the Chairman of the Kosovo Digital Asset Association, where he leads initiatives to advance crypto adoption and regulatory development in the region. Since entering crypto in 2016, Labinot has built one of the largest Albanian crypto communities, providing education in technical, fundamental, and on-chain analysis. Beyond crypto, he is a serial entrepreneur involved in multiple ventures across fintech, education, and emerging technologies. His work centers on helping individuals navigate markets with discipline, data-driven strategies, and a strong psychological edge.",
+        speaker_position: "Chairman at Kosovo Digital Asset Association",
+        speaker_socials: [
+            {
+                id: 1,
+                linkUrl: "https://x.com/labinotbjrm",
+                icon: <XIcon/>,
+            },
+            {
+                id: 2,
+                linkUrl: "https://www.facebook.com/labinotshn/",
+                icon: <FacebookIcon/>,
+            },
+            {
+                id: 3,
+                linkUrl: "https://www.linkedin.com/in/labinotbajrami",
+                icon: <LinkedinIcon/>,
+            }
+        ],
+    },
+
+    {
+        speaker_id: 28,
+        speaker_image:"/speakers/Shine_clean.png",
+        speaker_name: "Shkelqim Dushi",
+        speaker_description: "Shkelqim Dushi is a blockchain entrepreneur, growth strategist, and co-founder of 313 Labs. Since entering the industry in 2019, he has worked with crypto-native startups, tokenization initiatives, and blockchain companies, focusing on go-to-market strategy, ecosystem growth, and adoption. Through 313 Labs, he has helped scale multiple Web3 projects across product positioning, community building, partnerships, and market execution, supporting the growth of emerging blockchain ecosystems in the Balkans and beyond.",
+        speaker_position: "Co-Founder of 313 Labs",
+        speaker_socials: [
+            {
+                id: 1,
+                linkUrl: "https://x.com/shineDUDES",
+                icon: <XIcon/>,
+            },
+            {
+                id: 2,
+                linkUrl: "https://www.facebook.com/shkelqimdushinft/?locale=mt_MT",
+                icon: <FacebookIcon/>,
+            },
+            {
+                id: 3,
+                linkUrl: "https://www.linkedin.com/in/shkelqim-dushi-b34221286",
                 icon: <LinkedinIcon/>,
             }
         ],
